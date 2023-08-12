@@ -1,0 +1,98 @@
+/*seleciona cada um dos elementos do html*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*considera a borda na largura - USAR*/
+}
+
+body,
+ul,
+li,
+p{
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+    text-align: center;
+    /*REMOVE OS MARCADORES DA LISTA*/
+    list-style-type: none;
+}
+
+/*SELECIONA O ID CONTAINER*/
+#container{
+    /* background-color: brown; */
+/*DEFINE A LARGURA MÍNIMA DO CONTAINER*/
+    min-width: 430px;
+/*DEFINE A LARGURA MÁXIMA DO CONTAINER*/
+    max-width: 800px;
+/*CENTRALIZA UM CONTAINER NA PÁGINA*/
+    margin: 0 auto;
+}
+
+/* SELECIONA O ELEMENTO READER */
+header{
+    background-color: #333;
+    width: 100%;      /*largura */
+    padding-top: 20px;/* define um espaçamento interno no topo do elemento */
+}
+/* SELECIONA O ELEMENTO "A" COM A CLASS "LOGO" FILHA DE READER*/
+header>a.logo{
+    width: 150px;
+    display: block;
+    margin: 0 auto;  /*CENTRALIZA OS ELEMENTOS NO CINTAINER */
+}
+header>a.logo img{
+    width: 100%;
+}
+menu{
+    text-align: center;
+}
+.menu a{
+    color: #FFF;
+    /* REMOVE SUBLINHADO */
+    text-decoration: none;
+}
+.menu li{
+    padding: 5px;
+    margin: auto;
+}
+.banner{
+    background-image: url(../img/banner.jpg);
+    height: 300px;
+    width: 100%;
+    background-size: cover; /*PARA A FOTO DE FUNDO COBRIR A AREA*/
+    background-position: top left; /* posiciona a imagem */
+}
+.banner h1{
+    color: #FFF;
+    font-size: 1.4rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.galeria figure{
+    max-width: 412px;
+    margin: 10px auto;
+}
+.galeria figure img{
+    width: 100%;
+}
+footer{
+    background-color: #222;
+    padding: 10px;
+}
+footer p{
+    color: #ccc;
+    font-size: 1rem;
+}
+
+.galeria{
+    display: flex;       
+    flex-wrap: wrap;        /* Define que os elementos podem quebrar a linha quando necessário */
+    justify-content: center;            /* Alinha os elementos ao centro horizontalmente */
+}
+.galeria figure {
+    flex: 1;            /* Define que cada elemento ocupa uma parte igual da largura disponível */
+    margin: 5px;            /* Adiciona uma margem entre as figuras */
+}
+.menu{
+    display: flex;
+    justify-content: center;
+}
